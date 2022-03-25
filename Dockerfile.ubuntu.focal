@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:focal
 LABEL MAINTAINER="John Rofrano <rofrano@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -13,7 +13,8 @@ RUN apt-get update && \
         man-db \
         curl \
         wget \
-        vim-tiny && \
+        less \
+        vim && \
     apt-get -qq clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
